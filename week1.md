@@ -31,8 +31,36 @@ print (fibonacci)
 
 
 - Soru 3: Kullanıcıdan bir kelime girişi alan ve bu kelimenin palindrom (tersten okunduğunda aynı olan) olup olmadığını kontrol eden bir döngü ve koşullu ifade kombinasyonu nasıl oluşturulur?
+
+palindrom = input ("lutfen bir kelime giriniz:")
+
+tersten = palindrom[::-1]
+
+if palindrom == tersten:
+    print ("Evet bu bir palindrom")
+else:
+    print ("Hayir bu bir palindrom degil")
+
+
+
 - Soru 4: Kişinin kilo indeksini hesaplayıp indeks değerine göre zayıf, kilolu veya fazla kilolu olarak sonuç döndüren kodu yazınız.(kilo indeks hesabı için internete bakabilirsiniz)
 Bunun için kullanıcıdan kilo ve boy ölçülerini isteyiniz. Kilo indeksi 25’in altında ise zayıf, 25-30  arasında ise normal, 30-40`dan büyük ise kilolu, 40`tan büyük ise aşırı kilolu sonuçlarına varsın.
+
+kilo = int(input("Kac kilosunuz:"))
+boy = int(input("boyunuzu giriniz:"))
+
+kilo_indeksi = kilo / (boy*boy)
+if kilo_indeksi < 25:
+    print ("Biraz kiloya ihtiyaciniz var.")
+elif kilo_indeksi >= 25:
+    print ("Boy kilo oraniniz ideal")
+elif kilo_indeksi >= 30:
+    print ("Fazladan kilonuz var.")
+elif kilo_indeksi >= 40:
+    print ("Asiri kilolu grubundasiniz. Sagliginiz icin kilo verin.")
+
+
+
 
 ## Hackerrank ödevleri
 1.  https://www.hackerrank.com/challenges/python-arithmetic-operators/problem
