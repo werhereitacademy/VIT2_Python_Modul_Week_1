@@ -1,0 +1,64 @@
+#soru1_for_cozum
+sayi=int(input("lutfen bir sayi giriniz:"))
+
+for i in range(1,sayi+1):
+    if (i%2==1):
+        continue
+    else:
+        print(i)
+
+
+#soru1_while_cozum
+sayi = int(input("lutfen bir sayi giriniz: "))
+
+i=0
+
+while ( i<sayi):
+    i+=1
+    if(i%2==1):
+        continue
+    else:
+        print(i)
+
+
+soru3_cozum
+kelime = input("lutfen kelimeyi giriniz: ")
+uzunluk = len(kelime)
+print(uzunluk)
+
+i=1
+while(i<=uzunluk):
+    yenikelime = (kelime[-1*i],end="")       # burayi yeni bir degiskene atayamiyorum???
+    #print(kelime[-1*i],end="")
+
+    i+=1
+
+
+soru3_cozum
+kelime=input("lutfen kelimeyi giriniz: ")
+uzunluk=len(kelime)
+print(uzunluk)
+
+j=1
+for i in range(uzunluk):
+      yeniKelime=(kelime[uzunluk-j],end="") # degiskene atayamiyorum?
+      j+=1
+print(yeniKelime)
+
+
+soru4_cozum
+kilo=float(input("lutfen kilonuzu giriniz: "))
+boy=float(input("lutfen boyunuzu cm olarak giriniz: "))
+
+boyMetre=boy/100
+
+indeks=kilo/(boyMetre**2)
+
+if (indeks<25):
+    print("kilo indeksiniz sinirin altindadir; zayifsiniz")
+elif(indeks<30):
+    print("kilo indeksiniz uygundur")
+elif(indeks<40):
+    print("kilo indeksiniz fazladir; kilolusunuz")
+else:
+    print("Asiri kilolusunuz")
