@@ -1,0 +1,89 @@
+# Soru 1: Kullanıcıdan bir sayı girişi alarak, 1'den kullanıcının girdiği sayıya kadar olan tüm çift sayıları
+# ekrana yazdıran bir döngü nasıl oluşturulur? Bunu once 'for' ile sonra 'while' donguleri ile yapiniz
+
+#For dongusu ile yapilis :
+
+sayi_girme = int(input("Bir sayı girin: "))
+
+print("Çift Sayılar:")
+for i in range(1, sayi_girme):
+    if i % 2 == 1:
+        continue
+    print(i, "çift sayıdır")
+
+#While dongusu ile yapilis
+
+sayi = int(input("Bir sayi girin: "))
+
+print("Cift Sayılar:")
+i = 2
+while i < sayi:
+    print(i)
+    i += 2
+
+# Soru 2: Fibonacci dizisini hesaplayan ve sonucu belirli bir sınıra kadar olan sayıları içeren bir liste olarak 
+#döndüren bir döngü nasıl oluşturulur? Bunu once 'for' ile sonra 'while' donguleri ile yapiniz.
+
+#For dongusu
+
+sinir_sayisi = int(input("Fibonacci dizisini hangi sayiya kadar hesaplamak istersiniz? "))
+
+fibonacci = [0, 1]
+
+for i in range(0, sinir_sayisi):
+    son_terim = fibonacci[-1]
+    bir_onceki_terim = fibonacci[-2]
+    sonraki_terim = son_terim + bir_onceki_terim
+
+    if sonraki_terim <= sinir_sayisi:
+        fibonacci.append(sonraki_terim)
+    else:
+        break
+
+print("Fibonacci Dizisi:", fibonacci)
+
+# While dongusu
+
+sinir_sayisi = int(input("Fibonacci dizisini hangi sayiya kadar hesaplamak istersiniz? "))
+fibonacci = [0, 1]
+while fibonacci[-1] + fibonacci[-2] <= sinir_sayisi:
+    son_terim = fibonacci[-1]
+    bir_onceki_terim = fibonacci[-2]
+    sonraki_terim = son_terim + bir_onceki_terim
+    fibonacci.append(sonraki_terim)
+print("Fibonacci Dizisi:", fibonacci)
+
+#Soru 3: Kullanıcıdan bir kelime girişi alan ve bu kelimenin palindrom (tersten okunduğunda aynı olan) 
+#olup olmadığını kontrol eden bir döngü ve koşullu ifade kombinasyonu nasıl oluşturulur?
+
+kelime = input("Kelime girin: ")
+kelime = kelime.lower()
+kelimenin_tersi = kelime[::-1]
+if kelime == kelimenin_tersi:
+    print("Bu kelime bir PALINDROMDUR.")
+else:
+    print("Bu kelime bir PALINDROM degildir.")
+
+# Soru 4: Kişinin kilo indeksini hesaplayıp indeks değerine göre zayıf, kilolu veya fazla kilolu olarak 
+#sonuç döndüren kodu yazınız.(kilo indeks hesabı için internete bakabilirsiniz) Bunun için kullanıcıdan kilo ve 
+#boy ölçülerini isteyiniz. Kilo indeksi 25’in altında ise zayıf, 25-30 arasında ise normal, 30-40dan büyük ise kilolu, 
+#40tan büyük ise aşırı kilolu sonuçlarına varsın.
+
+kilo=int(input("Lutfen kilonuzu giriniz:"))
+boy_cm=int(input("Lutfen boyunuzu giriniz (Cm olarak)"))
+boy_metrekaresi=(boy_cm*2)/100
+vki=kilo/boy_metrekaresi
+print("Vucut kitle indeksiniz : ",vki)
+if vki < 18.5:
+    print("Zayifsiniz")
+elif 18.5 <= vki < 24.9:
+    print("Normalsiniz")
+elif 25 <= vki < 29.9:
+    print("Kilolusunuz")
+elif 30 <= vki < 34.9:
+    print("1. Derece Obezsiniz")
+elif  35 <= vki < 39.9:
+    print("2.Derece Obezsiniz")
+elif  vki >= 40:
+    print("3.Derece Obezsiniz")
+
