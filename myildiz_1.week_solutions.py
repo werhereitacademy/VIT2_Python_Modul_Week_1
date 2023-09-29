@@ -1,0 +1,1 @@
+soru1_cevabı
