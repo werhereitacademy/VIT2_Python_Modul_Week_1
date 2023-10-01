@@ -1,0 +1,45 @@
+#1.Link = Arithmetic Operators
+#if.....
+    print(a+b)
+    print(a-b)
+    print(a*b)
+
+2.Link = Find the Runner-Up Score!
+#arr=map....
+ arr.sort(reverse= True) #Böyle yaptım olmadı, map'in sort özelliği yokmuş. 
+     byk=arr[0]
+     for i in arr[1:]:
+         if i < byk:
+             print(i)
+             break
+     z = list(arr)
+     z.sort(reverse= True)
+     byk=z[0]
+     for i in z[1:]:
+         if i < byk:
+             print(i)
+             break
+
+
+
+3. Link = Print Function
+n = int...
+for i in range(1,n+1): #I. YOL
+        print(i,end="")
+#II.YOL
+n=int...
+i= 1
+while i < n:
+    print(i,end="")
+    i += 1
+    if i == n:
+    print(i)
+    break
+
+4. Link = Finding the percentage
+
+  query_name....
+  sy = 0
+      for i in student_marks[query_name]:
+          sy = sy+i
+      print("{:.2f}".format(sy/3))
