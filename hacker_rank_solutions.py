@@ -23,3 +23,32 @@ else:
     print("There is no runner up score")
 
 3- https://www.hackerrank.com/challenges/python-print/problem
+
+n = int(input())
+
+output = ""
+
+for i in range(1, n+1):
+    output += str(i)
+
+print(output)
+
+4- https://www.hackerrank.com/challenges/finding-the-percentage/problem
+
+n = int(input())
+
+ogrenci_notlari = {}
+
+for _ in range(n):
+    isim, *notlar = input().split()
+    ogrenci_notlari[isim] = list(map(float, notlar))
+
+aranan_isim = input()
+
+ortalama_not = sum(ogrenci_notlari[aranan_isim]) / len(ogrenci_notlari[aranan_isim])
+
+print("{:.2f}".format(ortalama_not))
+
+
+
+
